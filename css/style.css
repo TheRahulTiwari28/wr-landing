@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.banner{
+   background-image: url(../image/areas-we-serve.jpg);
+   background-size: cover;
+   background-position: center center;
+   top: 100px;
+   height: 80vh;
+   width: 100%;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+}
+
+.accordion{
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    /* border: 1px solid #000; */
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%);
+}
+.accordion .contentbox{
+    margin: 20px;
+    width: 300px;
+}
+.accordion .contentbox .label{
+    font-size: 14px;
+    font-weight: 700;
+}
+.accordion .contentbox .content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+.accordion .contentbox .content a{
+    font-size: 12px;
+    color: #000;
+    font-weight: 300;
+    padding: 10px 0;
+}
+.accordion .contentbox .content a:hover{
+    color: #f40000;
+}
+
+@media screen and (max-width: 992px) {
+    .accordion{
+        display: block;
+        max-width: 800px;
+        width: 80%;
+    }
+    
+    .accordion .contentbox{
+        position: relative;
+        margin: 10px 20px;
+        width: auto;
+    }
+    
+    .accordion .contentbox .label{
+        position: relative;
+        font-size: 16px;
+        padding: 10px;
+        /* background: #2694af; */
+        color: #f40000;
+        cursor: pointer;
+        font-weight: 300;
+    }
+    
+    .accordion .contentbox .label::before{
+        content: "+";
+        position: absolute;
+        font-size: 20px;
+        color: grey;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        font-size: 14px;
+    }
+    
+    .accordion .contentbox.active .label::before{
+        content: "-";
+    }
+    
+    .accordion .contentbox .content{
+        position: relative;
+        padding: 0;
+        background: #b9b9b9;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        overflow-y: auto;
+    }
+
+    .accordion .contentbox .content a{
+        font-size: 16px;
+    }
+    .accordion .contentbox.active .content{
+        height: auto;
+        padding: 20px;
+        transition: 0.5s;
+    }
+}

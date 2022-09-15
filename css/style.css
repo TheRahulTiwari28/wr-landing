@@ -7,6 +7,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.logo{
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo a{
+    position: fixed;
+    margin-top: 140px;
+}
 
 .banner{
    background-image: url(../image/areas-we-serve.jpg);
@@ -37,11 +47,12 @@ section{
 }
 .accordion .contentbox{
     margin: 20px;
-    width: 300px;
+    /* width: 300px; */
 }
 .accordion .contentbox .label{
     font-size: 14px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 .accordion .contentbox .content{
     display: flex;

@@ -9,11 +9,11 @@
 </head>
 <body>
     <!-- Start of Navbar -->
-    <div class="logo">
-        <a href="">
+    <header class="header">
+        <a href="#" class="logo">
             <img src="/image/relocation.png" alt="">
         </a>
-    </div>
+    </header>
     <!-- End of Navbar -->
 
     <!-- Start of Banner -->
@@ -172,13 +172,13 @@
     </section>
     <!-- End of Country table -->
     <script>
-         const accordion = document.getElementsByClassName('contentbox');
+        const accordion = document.getElementsByClassName('contentbox');
 
-         for(i = 0; i < accordion.length; i++){
+        for(i = 0; i < accordion.length; i++){
             accordion[i].addEventListener('click', function(){
                 this.classList.toggle('active')
             })
-         }
+        }
     </script>
 </body>
 </html>

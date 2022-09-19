@@ -25,7 +25,7 @@
     width: 240px;
     left: -245px;
     top: 8%;
-    height: auto;
+    height: 100%;
     background: #fff;
     transition: all .5s ease;
 }
@@ -165,6 +165,24 @@ section{
 }
 
 @media screen and (max-width: 992px) {
+    .header{
+        justify-content: space-evenly;
+    }
+    .sidebar{
+        top: 0;
+    }
+    .logo{
+        width: 220px;
+    }
+    .logo img{
+        width: 100%;
+    }
+    label #btn, label #cancel{
+        left: 30px;
+    }
+    #check:checked ~ label #cancel {
+        margin-left: 210px;
+    }
     .accordion{
         display: block;
         max-width: 800px;
